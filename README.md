@@ -2,20 +2,22 @@
 
 ## 问题
 
-### `maven wrapper`调用
-
-通过maven生成项目以后，在项目目录下执行`mvn -N io.takari:maven:wrapper`，会生成三个文件`.mvn`，`mvnw`,`mvnw.cmd`,
+项目目录如下
 ```
 project
+├── .idea
 ├── .mvn
 ├── mvnw
 ├── mvnw.cmd
 ├── src
 └── pom.xml
 ```
+### 1. `maven wrapper`调用
 
+通过maven生成项目以后，在项目目录下执行`mvn -N io.takari:maven:wrapper`，会生成三个文件`.mvn`，`mvnw`,`mvnw.cmd`。
+执行`sh mvnw`可以替代`mvn`命令，在项目目录下会生成`.m2`文件，`.m2`文件不用上传，保存依赖文件
 
-### git上传时，文件保留
+### 2. git上传时，文件保留
 
 `.idea`文件是IDE的配置文件，应该予以保留，这样可以统一IDE环境
 
