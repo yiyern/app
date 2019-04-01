@@ -12,8 +12,8 @@ services:
       - "8088:8088"
     command: "sh mvnw clean spring-boot:run -Pdocker"
     depends_on:
-      - appmysql
-  appmysql:
+      - database
+  database:
     container_name: app_mysql
     image: mysql:8.0.15
     environment:
