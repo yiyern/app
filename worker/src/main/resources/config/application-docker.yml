@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://datasource:3306/db_test?autoReconnect=true&useSSL=false&&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://database:3306/db_test?autoReconnect=true&useSSL=false&&allowPublicKeyRetrieval=true
     username: root
     password: pa55w0rd
     initialization-mode: always

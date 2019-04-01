@@ -97,21 +97,15 @@
             <properties>
                 <spring.profiles.active>dev</spring.profiles.active>
             </properties>
-        </profile>
-        <profile>
-            <id>docker</id>
-            <properties>
-                <spring.profiles.active>docker</spring.profiles.active>
-            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
         <profile>
             <id>release</id>
             <properties>
                 <spring.profiles.active>release</spring.profiles.active>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
     </profiles>
 

@@ -26,6 +26,6 @@ public class MainController {
     }
 
     public String said() {
-        return "归属,突";
+        return "归属,是";
     }
 }
