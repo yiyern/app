@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    restart: always
+    privileged: true
+    build: ./worker
+    working_dir: /home/app
+    user: appuser
+    volumes:
+      - ./worker:/home/app:rw
+    ports:
+      - "8088:8088"
+    command: "sh mvnw clean spring-boot:run -Pdev"

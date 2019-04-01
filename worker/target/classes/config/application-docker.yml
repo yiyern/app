@@ -1,0 +1,12 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://appmysql:3306/db_test?autoReconnect=true&useSSL=false&&allowPublicKeyRetrieval=true
+    username: root
+    password: pa55w0rd
+    initialization-mode: always
+    schema: classpath:mysql/schema.sql
+    data: classpath:mysql/data.sql
