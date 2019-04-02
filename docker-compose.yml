@@ -8,8 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: pa55w0rd
       MYSQL_ROOT_HOST: "%"
       MYSQL_DATABASE: db_test
-    expose:
-      - "3306"
+    ports: 
+      - "3306:3306"
     restart: always
     networks:
       - overlay

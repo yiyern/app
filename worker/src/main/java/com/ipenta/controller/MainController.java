@@ -1,29 +1,35 @@
 package com.ipenta.controller;
 
-import com.ipenta.entity.User;
-import com.ipenta.mapper.UserMapper;
+import java.util.List;
+
+import com.ipenta.entity.UserInfo;
+import com.ipenta.mapper.UserInfoMapper;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
 
-    private final UserMapper userMapper;
-
-    public MainController(final UserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
+    @Autowired
+    private UserInfoMapper userInfoMapper;
 
     @RequestMapping("/")
     public String hello() {
-        User user = userMapper.findUserByName("yiyern");
-        if (null == user) {
-            return "hell: 404";
-        }
-        return "hello：" + user.getName() + "，你有: " + user.getMoney() + " 爱看： " + said();
-    }
 
-    public String said() {
-        return "归属,是d";
+        UserInfo entity = new UserInfo();
+        entity.setAge(11);
+        entity.setName("oooooo");
+        entity.setMoney(Double.parseDouble("1111.11"));
+
+        userInfoMapper.insert(entity);
+
+        // List<UserInfo> userInfos =
+        // userInfoMapper.selectByExample(Example.builder(example));
+        // if (null == userInfos) {
+        // return "hell: 404";
+        // }
+        return "hello：" + entity;
     }
 }

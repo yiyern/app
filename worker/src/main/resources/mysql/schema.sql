@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `userInfo`;
-CREATE TABLE `userInfo`(
+DROP TABLE IF EXISTS `user_info`;
+CREATE TABLE `user_info`(
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `name` varchar(33) DEFAULT NULL COMMENT '姓名',
   `age` int(3) DEFAULT NULL COMMENT '年龄',
