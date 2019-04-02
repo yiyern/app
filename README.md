@@ -37,3 +37,7 @@ USER appuser
 ### 5. docker-compose 容器关联
 
 使用`depends_on`做依赖，可以在使用容器名作为别名依赖，比如在本例中，mysql容器被取名`datasource`,在应用调用mysql的url可以设置为`jdbc:mysql://datasource:3306`
+
+## TODO
+
+1. 搞不定devtools和profile配合的问题，热部署重启的时候，profile只会指向默认，即`pom.xml`指定了`activeByDefault`
