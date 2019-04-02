@@ -20,8 +20,7 @@ public class MainController {
         if (null == user) {
             return "hell: 404";
         }
-
-        return "hello：" + user.getName() + "，你有: " + user.getMoney() + " 爱看d： " + said();
+        return "hello：" + user.getName() + "，你有: " + user.getMoney() + " 爱看： " + said();
     }
 
     public String said() {

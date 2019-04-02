@@ -1,6 +1,18 @@
 version: "3"
 
 services:
+  database:
+    container_name: app_mysql
+    image: mysql:8.0.15
+    environment:
+      MYSQL_ROOT_PASSWORD: pa55w0rd
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: db_test
+    expose:
+      - "3306"
+    restart: always
+    networks:
+      - overlay
   app:
     container_name: app
     restart: always
@@ -15,13 +27,7 @@ services:
     command: "sh mvnw clean spring-boot:run"
     depends_on:
       - database
-  database:
-    container_name: app_mysql
-    image: mysql:8.0.15
-    environment:
-      MYSQL_ROOT_PASSWORD: pa55w0rd
-      MYSQL_ROOT_HOST: "%"
-      MYSQL_DATABASE: db_test
-    expose:
-      - "3306"
-    restart: always
+    networks:
+      - overlay
+networks:
+  overlay:

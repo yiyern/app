@@ -38,7 +38,10 @@ USER appuser
 
 ### 5. docker-compose 容器关联
 
-使用`depends_on`做依赖，可以在使用容器名作为别名依赖，比如在本例中，mysql容器被取名`datasource`,在应用调用mysql的url可以设置为`jdbc:mysql://datasource:3306`
+使用`depends_on`做依赖，可以在使用容器名作为别名依赖，比如在本例中，mysql容器被取名`database`,在应用调用mysql的url可以设置为`jdbc:mysql://database:3306`
+
+## 6. vscode快捷键
+`ctrl+alt+I`格式化
 
 ## TODO
 
