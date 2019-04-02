@@ -2,8 +2,9 @@
 
 ## 问题
 
-项目目录如下
-```
+项目目录如下:
+
+```plain
 project
 ├── .idea
 ├── .mvn
@@ -12,6 +13,7 @@ project
 ├── src
 └── pom.xml
 ```
+
 ### 1. `maven wrapper`调用
 
 通过maven生成项目以后，在项目目录下执行`mvn -N io.takari:maven:wrapper`，会生成三个文件`.mvn`，`mvnw`,`mvnw.cmd`。
@@ -26,7 +28,8 @@ project
 > docker容器跟HOST主机共享一个内核，所以容器中的用户和host主机中的用户是同一个，docker容器默认使用的是`root`用户，这个`root`用户也是host主机的`root`用户
 
 `ubuntu`使用的非root用户pid一般为1000,uid也是1000,所以在`Dockerfile`中设置一个用户pid为1000,uid为1000，指定文件夹为特定用户，这样跟host主机上使用的非ROOT用户一致，保证volume的权限一致性,
-```
+
+```Dockerfile
 RUN groupadd -r -g 1000 appuser
 RUN useradd -r -u 1000 -g 1000 -d /home/app appuser
 USER appuser
@@ -41,7 +44,12 @@ USER appuser
 使用`depends_on`做依赖，可以在使用容器名作为别名依赖，比如在本例中，mysql容器被取名`database`,在应用调用mysql的url可以设置为`jdbc:mysql://database:3306`
 
 ## 6. vscode快捷键
+
 `ctrl+alt+I`格式化
+
+## 7. `tk.mybatis`框架
+
+[tk,mybatis](doc/tkmybatis.md)
 
 ## TODO
 

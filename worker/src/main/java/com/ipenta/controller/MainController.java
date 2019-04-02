@@ -1,7 +1,5 @@
 package com.ipenta.controller;
 
-import java.util.List;
-
 import com.ipenta.entity.UserInfo;
 import com.ipenta.mapper.UserInfoMapper;
 
