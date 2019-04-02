@@ -4,7 +4,7 @@ services:
   app:
     container_name: app
     restart: always
-    build: 
+    build:
       context: ./worker
       dockerfile: ../Dockerfile
     working_dir: /home/app
@@ -20,10 +20,8 @@ services:
     image: mysql:8.0.15
     environment:
       MYSQL_ROOT_PASSWORD: pa55w0rd
-      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_HOST: "%"
       MYSQL_DATABASE: db_test
     expose:
       - "3306"
-    # ports:
-    #   - "3306:3306"
     restart: always
