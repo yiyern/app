@@ -2,7 +2,6 @@ package com.ipenta.controller;
 
 import com.ipenta.entity.User;
 import com.ipenta.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +25,6 @@ public class MainController {
     }
 
     public String said() {
-        return "归属,是";
+        return "归属,是d";
     }
 }
