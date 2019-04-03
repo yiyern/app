@@ -23,7 +23,7 @@
         <targetMapperPackage>com.ipenta.mapper</targetMapperPackage>
         <targetEntityPackage>com.ipenta.entity</targetEntityPackage>
         <!-- tk.mybatis -->
-        <tk.mybatis.version>4.1.5</tk.mybatis.version>
+        <tk.mybatis.version>2.1.5</tk.mybatis.version>
         <mapper.plugin>tk.mybatis.mapper.generator.MapperPlugin</mapper.plugin>
         <mapper.Mapper>tk.mybatis.mapper.common.Mapper</mapper.Mapper>
     </properties>
@@ -49,7 +49,7 @@
         </dependency>
         <dependency>
             <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
             <version>${tk.mybatis.version}</version>
         </dependency>
         <!-- database dependency ：调试数据库 -->
